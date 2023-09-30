@@ -17,10 +17,13 @@ const App: React.FC = () => {
     ])
     setValue('')
   }
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = e => {
+    setValue(e.target.value)
+  }
   return (
     <div>
       <div>
-        <input value={value} onChange={e => setValue(e.target.value)} />
+        <input value={value} onChange={handleChange} />
         <button onClick={addTodo}>Add</button>
       </div>
       <TodoList items={todos} />
