@@ -1,4 +1,4 @@
-import { ITodo } from "../types/data"
+import { ITodo } from "../../types/data"
 
 interface ITodoItem extends ITodo {
     removeTodo: (id: number) => void
