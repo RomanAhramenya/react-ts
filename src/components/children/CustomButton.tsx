@@ -1,17 +1,14 @@
-import { ReactElement, ReactNode } from "react"
-
-interface ICustomButton {
-    // children: ReactNode // классика позволяет передовать любое количество элементов
-    // children: string // разрешена только строка...если обернуть в span , то будет ошибка
-    children: ReactElement //
+interface IcustomButton {
 }
 
-const CustomButton: React.FC<ICustomButton> = ({ children }) => {
+const customButton: React.FC<IcustomButton> = (props) => {
+    const { } = props
+
     return (
-        <button style={{ background: 'lightgreen', padding: '10px', border: 'none' }}>
-            {children}
-        </button>
+        <>
+
+        </>
     )
 }
 
-export default CustomButton
+export default customButton

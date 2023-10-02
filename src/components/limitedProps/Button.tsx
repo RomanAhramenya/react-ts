@@ -5,14 +5,13 @@
 // описываем ситуацию когда мы отрисовываем или стрелку или иконку
 // и вдруг передадим в пропсы и то и то, то ошибки не будет ..и отрисует оба элемента
 
-interface CommonButtonProps {
-
+interface CommonButtonProps { // определяем возможные типы
     num?: number;
     string?: string;
 
 }
 
-interface ArrowButtonProps extends CommonButtonProps {
+interface ArrowButtonProps extends CommonButtonProps { // один может быть другой нет
     num: number;
     string?: never
 }
