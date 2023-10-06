@@ -4,7 +4,7 @@ const Posts = () => {
     const { id } = useParams()
     return (
         <div>
-            1
+            {id}
         </div>
     )
 }
