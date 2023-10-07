@@ -1,5 +1,6 @@
-export interface ITodo {
+export interface IPosts {
+  userId: number;
   id: number;
   title: string;
-  complete: boolean;
+  body: string;
 }

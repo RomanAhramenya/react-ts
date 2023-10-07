@@ -4,6 +4,7 @@ import style from './lauout.module.css'
 interface ICustomLinkProps {
     to: string
     children: ReactNode
+
 }
 
 const CustomLink = (props: ICustomLinkProps) => {

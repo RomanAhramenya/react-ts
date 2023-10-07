@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react"
+import { Link } from 'react-router-dom'
+import style from './blog.module.css'
+import { IPosts } from "../../types/data"
 
-interface IPosts {
-    "userId": number
-    "id": number
-    "title": string
-    "body": string
-}
 
 const BlogPage = () => {
     const [posts, setPosts] = useState<IPosts[]>([])
@@ -16,8 +13,12 @@ const BlogPage = () => {
             .then(json => setPosts(json))
     }, [])
     return (
-        <div>
-            BlogPage
+        <div className={style.wrapper}>
+            {posts.map(post => {
+                return <Link className={style.link} key={post.id} to={`/blog/${post.id}`}>
+                    {post.id} {post.title}
+                </Link>
+            })}
         </div>
     )
 }
