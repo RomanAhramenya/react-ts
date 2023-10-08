@@ -6,6 +6,7 @@ import BlogPage from './components/pages/BlogPage'
 import NotFoundPage from './components/pages/NotFoundPage'
 import Layout from './components/layout/Layout'
 import Posts from './components/pages/Posts'
+import EditPostPage from './components/pages/EditPostPage'
 
 
 const App: React.FC = () => {
@@ -21,6 +22,7 @@ const App: React.FC = () => {
             <Route path='about' element={<AboutPage />} />
             <Route path='blog' element={<BlogPage />} />
             <Route path='blog/:id' element={<Posts />} />
+            <Route path='blog/:id/edit' element={<EditPostPage />} />
             <Route path='*' element={<NotFoundPage />} />
           </Route>
 

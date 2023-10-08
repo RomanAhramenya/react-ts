@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { IPosts } from '../../types/data'
+import { Link } from 'react-router-dom'
 const Posts = () => {
     const { id } = useParams()
     const [post, setPost] = useState<IPosts | null>(null)
@@ -19,6 +20,8 @@ const Posts = () => {
                 <b>{post?.id} </b>
                 {post?.body}
             </p>
+
+            <Link to={`/blog/${id}/edit`}>edit post</Link>
         </div>
     )
 }
