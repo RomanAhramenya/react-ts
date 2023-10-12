@@ -7,13 +7,10 @@ interface IRequireAuthProps {
 const RequireAuth = (props: IRequireAuthProps) => {
     const { children } = props
     const auth = false
-    const navigate = useLocation()
+    const location = useLocation()
 
     if (!auth) return <Navigate to='/login' state={{ from: location }} />
     return children
-
-
-
 
 }
 

@@ -5,7 +5,7 @@ const Layout = () => {
     return (
         <div className={style.wrapper}>
             <header>
-                <CustomLink to='/'>Home</CustomLink>
+                <CustomLink  to='/'>Home</CustomLink>
                 <CustomLink to='/about'>About</CustomLink>
                 <CustomLink to='/blog'>Blog</CustomLink>
             </header>
